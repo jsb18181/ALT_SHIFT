@@ -5,8 +5,6 @@ import android.os.Parcelable;
 
 /**
  * A Shift is a date and a person (shifter) working on that date.
- *
- * @author pcolr
  */
 public class Shift implements Parcelable {
 

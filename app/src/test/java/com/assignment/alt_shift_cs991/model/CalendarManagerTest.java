@@ -5,15 +5,16 @@ import com.assignment.alt_shift_cs991.adapters.CalendarManager;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Unit Tests for CalendarManager methods
+ */
 public class CalendarManagerTest {
-    /**
-     * Unit Tests for CalendarManager methods
-     */
+
     private CalendarManager calendarManager;
 
     @Before
     public void setUp() throws Exception {
-       calendarManager = new CalendarManager();
+        calendarManager = new CalendarManager();
     }
 
     @Test

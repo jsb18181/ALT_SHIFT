@@ -23,6 +23,7 @@
     <string name="login">Login</string>
     <string name="name">Name</string>
     <string name="role">Role</string>
+    <string name="logout">Logout</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="No_shifts">No shifts on the selected day</string>

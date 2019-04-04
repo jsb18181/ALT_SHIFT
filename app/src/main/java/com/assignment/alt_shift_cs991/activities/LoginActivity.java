@@ -18,6 +18,8 @@ import androidx.cardview.widget.CardView;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText userName, password;
+
+
     private CardView loginButton;
     private int passwordCount;
     protected Application model;

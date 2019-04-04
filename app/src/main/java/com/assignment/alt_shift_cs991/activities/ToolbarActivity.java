@@ -27,8 +27,6 @@ public class ToolbarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_toolbar_activity);
         initToolbar();
         model = (Application) getApplication();
-
-
     }
 
     /**
@@ -51,6 +49,10 @@ public class ToolbarActivity extends AppCompatActivity {
 
         final MenuItem menuItem = menu.findItem(R.id.action_more);
 
+        final MenuItem menuItem1 = menu.findItem(R.id.action_logout);
+
+        View actionView1 = menuItem1.getActionView();
+
         View actionView = menuItem.getActionView();
         textSwapItemCount = actionView.findViewById(R.id.swap_badge);
 
@@ -58,6 +60,9 @@ public class ToolbarActivity extends AppCompatActivity {
 
         actionView.setOnClickListener(v -> {
             onOptionsItemSelected(menuItem);
+        });
+        actionView1.setOnClickListener(v -> {
+            onOptionsItemSelected(menuItem1);
         });
         return true;
     }
@@ -80,6 +85,12 @@ public class ToolbarActivity extends AppCompatActivity {
         if (id == R.id.action_home && shifter.isManager()) {
             Intent intent = new Intent(this, ManagerCalendarActivity.class);
             startActivity(intent);
+            return false;
+        } else if (id == R.id.action_logout) {
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
             return false;
         } else if (id == R.id.action_more) {
             Intent intent = new Intent(ToolbarActivity.this, PendingSwapsEmp.class);

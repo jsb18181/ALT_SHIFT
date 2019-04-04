@@ -16,8 +16,8 @@ import java.util.List;
 import androidx.room.Room;
 
 /**
- * Backend data storage and link to database. Extends the application class and contains methods to
- * add logged in user information to the shared preferences XML file.
+ * Extends the application class and contains methods to
+ * add logged in user information to the shared preferences XML.
  */
 public class Application extends android.app.Application {
 

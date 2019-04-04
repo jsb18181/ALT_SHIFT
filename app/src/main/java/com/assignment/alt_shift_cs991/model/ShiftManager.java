@@ -9,10 +9,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Holds lists of Shifters, Shifts and ShiftSwaps
+ */
 public class ShiftManager implements Serializable {
-    /**
-     * Holds lists of Shifters, Shifts and ShiftSwaps
-     */
+
     private List<Shifter> shifters;
     private List<Shift> shifts;
     private List<ShiftSwap> shiftSwaps;
@@ -364,6 +365,7 @@ public class ShiftManager implements Serializable {
 
     /**
      * Removes a Shift from the list of Shifts
+     *
      * @param shift
      */
     public void removeShift(Shift shift) {

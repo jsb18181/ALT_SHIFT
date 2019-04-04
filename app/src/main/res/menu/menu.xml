@@ -17,5 +17,10 @@
         app:actionLayout="@layout/menu_ic_layout"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout"
+        app:actionLayout="@layout/menu_ic_logout"
+        app:showAsAction="ifRoom" />
 
 </menu>

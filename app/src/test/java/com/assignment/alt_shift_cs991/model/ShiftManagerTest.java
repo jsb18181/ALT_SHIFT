@@ -7,10 +7,11 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
+/**
+ * Unit tests for ShiftManager
+ */
 public class ShiftManagerTest {
-    /**
-     * Unit tests for ShiftManager
-     */
+
     private ShiftManager shiftManager;
     private Shifter shifter1;
     private Shifter shifter2;
@@ -20,13 +21,14 @@ public class ShiftManagerTest {
 
     /**
      * Sets up the shiftManager with shifts, shifers and shiftSwaps
+     *
      * @throws Exception
      */
     @Before
     public void setUp() throws Exception {
         shiftManager = new ShiftManager();
-        shifter1 = new Shifter("1","1","f","s");
-        shifter2 = new Shifter("2","2","f","s");
+        shifter1 = new Shifter("1", "1", "f", "s");
+        shifter2 = new Shifter("2", "2", "f", "s");
         shift1 = new Shift("date1", shifter1);
         shift2 = new Shift("date2", shifter2);
         shiftSwap = new ShiftSwap(shift1, shift2);
@@ -179,7 +181,7 @@ public class ShiftManagerTest {
      */
     @Test
     public void testAddShifterSuccess() {
-        assertTrue(shiftManager.addShifter("x","x","x","x"));
+        assertTrue(shiftManager.addShifter("x", "x", "x", "x"));
         assertEquals(shiftManager.getShifters().size(), 3);
     }
 
@@ -197,7 +199,7 @@ public class ShiftManagerTest {
      */
     @Test
     public void testAddShifterShifter() {
-        Shifter s = new Shifter("x","x","x","x");
+        Shifter s = new Shifter("x", "x", "x", "x");
         shiftManager.addShifter(s);
         assertEquals(shiftManager.getShifters().size(), 3);
     }

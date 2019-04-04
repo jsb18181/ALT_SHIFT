@@ -45,10 +45,9 @@ public class RegisterActivity extends AppCompatActivity {
             if (userName.getText().toString().isEmpty() || password.getText().toString().isEmpty() || name.getText().toString().isEmpty() || surname.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(), "Please fill in missing information!", Toast.LENGTH_SHORT).show();
             }
-            if(model.db.daoAccess().getAllShiftersUserID().contains(userName.getText().toString())){
+            if (model.db.daoAccess().getAllShiftersUserID().contains(userName.getText().toString())) {
                 Toast.makeText(getApplicationContext(), "Username already in use!", Toast.LENGTH_SHORT).show();
-            }
-            else {
+            } else {
                 shifter = new Shifter(userName.getText().toString(), password.getText().toString(), name.getText().toString(), surname.getText().toString());
                 if (isManagerCheck.isChecked()) {
                     shifter.setManager(true);

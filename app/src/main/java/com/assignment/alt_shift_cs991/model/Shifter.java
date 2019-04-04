@@ -12,9 +12,7 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 /**
- * A Shifter is a user that works shifts. This is one of the entities in out SQLite database.
- *
- * @author pcolr
+ * A Shifter is a user that works shifts. This is one of the entities in the SQLite database.
  */
 @Entity
 public class Shifter implements Parcelable {

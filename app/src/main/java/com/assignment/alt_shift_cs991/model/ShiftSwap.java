@@ -5,8 +5,6 @@ import android.os.Parcelable;
 
 /**
  * A ShiftSwap is a pair of shifts proposed to swap the dates.
- *
- * @author pcolr
  */
 public class ShiftSwap implements Parcelable {
 

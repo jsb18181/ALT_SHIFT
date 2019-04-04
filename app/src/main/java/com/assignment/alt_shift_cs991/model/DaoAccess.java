@@ -50,6 +50,7 @@ public interface DaoAccess {
 
     /**
      * Returns all userIDs of shifters in database using an SQL query
+     *
      * @return
      */
     @Query("SELECT userID FROM Shifter")
